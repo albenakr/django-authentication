@@ -1,29 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block page_title %}Home Page{% endblock %}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=	, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Django Auth</title>
-</head>
-
-<body>
-	<nav>
-		<li><a href="#">Login</a></li>
-		<li><a href="{% url 'logout' %}">Logout</a></li>
-		<li><a href="#">Register</a></li>
-		<li><a href="#">Profile</a></li>
-	</nav>
-	<hr>
-	{% if messages %}
-	<div>
-		{% for message in messages %}
-		{{ message }}
-		{% endfor %}
-	</div>
-
-	{% endif %}
-</body>
-
-</html>
+{% block page_heading %}Home{% endblock %}
